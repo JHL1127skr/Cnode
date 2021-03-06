@@ -1,0 +1,54 @@
+.breadcrumb {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: 0 0;
+
+    a {
+        color: #80bd01;
+    }
+
+    .divider {
+        adding: 0 5px;
+        color: #ccc;
+    }
+}
+
+.userinfo {
+    padding: 10px;
+    border-top: 1px solid #e5e5e5;
+    position: relative;
+
+    .user_name {
+        position: absolute;
+        vertical-align: top;
+        margin-left: 20px;
+        font-size: 50px;
+        color: #ccc;
+        top: 30%;
+    }
+}
+
+.createTime {
+    margin-top: 20px;
+    color: #333;
+    font-size: 14px;
+}
+
+.panel {
+    margin-bottom: 13px;
+}
+
+.more {
+    font-size: 14px;
+    color: #666;
+}
+
+.panel_header_user {
+    padding: 10px;
+
+}
+
+#blue {
+    color: #08c;
+}

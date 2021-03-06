@@ -2,11 +2,12 @@ import './App.css';
 import TopNav from "./Component/TopNav";
 import Topic from "./Component/topic";
 import Footer from "./Component/Footer";
+import UserDetails from "./Component/UserDetails";
 import { useEffect, useState } from 'react'
 import { indexRouters } from './router/index'
 import { Route, withRouter, useLocation } from 'react-router-dom'
 
-function App(poops) {
+function App(props) {
   const { pathname } = useLocation()
   const [topNavFlag, setTopNavFlag] = useState(true)
   const [footer, setFooter] = useState(true)
@@ -34,6 +35,7 @@ function App(poops) {
           })
         }
         <Route path="/topic/:id" component={Topic} />
+        <Route path="/UserDetails/:id" component={UserDetails} />
       </div>
       {topNavFlag ? < Footer flag={footer} /> : null}
 
