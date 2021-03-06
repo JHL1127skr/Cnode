@@ -3,8 +3,9 @@ import React, { Component } from 'react'
 export default class index extends Component {
     render() {
         return (
-            <div>
-                <h1>api</h1>
+            <div className="panel">
+                <div className="panel_header"></div>
+                <div className="panel_inner"></div>
             </div>
         )
     }

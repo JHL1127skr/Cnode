@@ -7,7 +7,8 @@ export default class index extends Component {
     }
     render() {
         return (
-            <div className="footer">
+            <div className={this.props.flag ? "footer" : "footer fix_footer"
+            }>
                 <div className="footer_main">
                     <div className="links">
                         <a href="https://cnodejs.org/rss" >RSS</a>
@@ -31,7 +32,7 @@ export default class index extends Component {
                     </div>
                 </div>
 
-            </div>
+            </div >
         )
     }
 }

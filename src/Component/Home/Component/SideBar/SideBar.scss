@@ -1,0 +1,144 @@
+.sideBar {
+    width: 290px;
+    font-size: 14px;
+    float: right;
+    margin-bottom: 20px;
+}
+
+.sideBar_item {
+    margin-bottom: 13px;
+}
+
+.code {
+    text-align: center;
+
+    img {
+        width: 200px;
+    }
+
+    a {
+        color: #778087;
+        font-size: 13px;
+    }
+}
+
+.sideBar_inner {
+    padding: 10px;
+    border-radius: 0 0 3px 3px;
+    background-color: #fff;
+    line-height: 2em;
+
+    p {
+        margin: 0 0 10px;
+        line-height: 2em;
+        font-size: 14px;
+    }
+
+    div {
+        font-size: 13px;
+
+        a {
+            color: #778087;
+
+            .span-info {
+                display: inline-block;
+                float: none;
+                padding: 3px 10px;
+                border: none;
+                margin: 0;
+                font-size: 14px;
+                transition: all .2s ease-in-out;
+                cursor: pointer;
+                letter-spacing: 2px;
+                box-shadow: none;
+                border-radius: 3px;
+                line-height: 2em;
+                vertical-align: middle;
+                color: #fff;
+                background-color: #5bc0de;
+            }
+        }
+    }
+
+    .list {
+        margin: 0 0 10px 25px;
+
+        li {
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: #000;
+                position: absolute;
+                top: 45%;
+                left: -15px;
+            }
+        }
+    }
+
+    .unstyled {
+        margin: 0 0 10px 25px;
+        margin-left: 0;
+
+        li {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            max-width: 270px;
+            font-size: 14px;
+            color: #778087;
+            white-space: nowrap;
+        }
+    }
+
+    ol {
+        margin: 4px 0;
+        list-style: none;
+        font-size: 13px;
+
+        li {
+            .top_score {
+                color: gray;
+                padding: 2px;
+                margin-right: 10px;
+            }
+
+            .user_name {
+                max-width: 120px;
+                white-space: nowrap;
+                display: inline-block;
+                vertical-align: middle;
+                color: #778087;
+
+            }
+        }
+    }
+
+    .friendship-community {
+        img {
+            width: 150px;
+        }
+
+        .sep10 {
+            height: 10px;
+        }
+    }
+}
+
+.sideBar_header {
+    color: #51585c;
+    border-radius: 3px 3px 0 0;
+    padding: 10px;
+    background-color: #f6f6f6;
+
+    .col_fade {
+        color: #444;
+        font-size: 13px;
+    }
+
+    .dark {
+        font-size: 13px;
+    }
+}

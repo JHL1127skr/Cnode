@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 import { listByPageAPI } from '../../../../server/topics'
 import { setType, setTime } from '../../../../utils/topics'
 import './panel.scss'
@@ -42,6 +42,7 @@ class index extends Component {
     componentDidMount() {
         listByPageAPI({ page: this.state.page, type: this.state.type })
             .then(({ data }) => {
+                console.log(data);
                 data.forEach(item => {
                     item.time = setTime(item.last_reply_at)
                     item.label = setType(item.top, item.good, item.tab)
@@ -50,9 +51,6 @@ class index extends Component {
                     })
                 });
             })
-    }
-    x = () => {
-        this.props.history.push('/user')
     }
     render() {
         return (
@@ -75,19 +73,18 @@ class index extends Component {
                         {this.state.list.map(v => {
                             return (
                                 <div className="cell" key={v.id} >
-                                    <a href="" className="user_avatar">
+                                    <Link to={{ pathname: '/topic/' + v.id, }} className="user_avatar">
                                         <img src={v.author.avatar_url} title={v.author.loginname} />
-                                    </a>
+                                    </Link>
                                     <span className="reply_count">
                                         <span>{v.reply_count}</span>
                                         <span>/</span>
                                         <span>{v.visit_count}</span>
                                     </span>
-                                    <a href="#" className="last_time" onClick={this.x}>{v.time}</a>
+                                    <Link to={{ pathname: '/topic/' + v.id, }} className="last_time" >{v.time}</Link>
                                     <div className="topic_title_wrapper">
                                         {v.label !== '' ? <span className={v.label == '置顶' || v.label == '精品' ? "put_top" : 'put_top about'}>{v.label}</span> : <></>}
-                                        <a href="" className="topic_title" title={v.title}>
-                                            {v.title} </a>
+                                        <Link to={{ pathname: '/topic/' + v.id, }} className="topic_title" title={v.title}>   {v.title}</Link>
                                     </div>
                                 </div>
                             )
